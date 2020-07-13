@@ -27,6 +27,7 @@ class Controller {
     void run();
 	void setRunWaitsForAnEvent(bool b) { runWaitsForAnEvent = b;}
 	void setWindowTitle(const std::string& title);
+    static int newWindowWidth, newWindowHeight;
 
     protected:
     void initializeCallbacksForRC();
@@ -37,7 +38,6 @@ class Controller {
     void createWindowAndRC(const std::string& windowTitle, int rcFlags);
     int glClearFlags;
     bool runWaitsForAnEvent;
-    static int newWindowWidth, newWindowHeight;
     std::string titleString(const std::string& str);
     void setClearFlags(int rcFlags);
 
